@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators in C | CodePath</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Code<span>Path</span></div>
+        <a href="../c-beginner.html" class="nav-link">Back to Lesson</a>
+    </nav>
+
+    <section class="lesson-content">
+        <span class="lesson-number">Lesson 6</span>
+        <h1>Operators in C</h1>
+        <p>
+            Operators are symbols used to perform operations on variables
+            and values. In this lesson, you will learn the different types of operators in C.
+        </p>
+
+        <h2>1. Arithmethic Operators</h2>
+        <p>Arithmethic operators are used to perform mathematical Calculations.</p>
+
+        <ul>
+            <li><strong>+</strong> Addition</li>
+            <li><strong>-</strong> Subtraction</li>
+            <li><strong>*</strong> Multiplication</li>
+            <li><strong>/</strong> Division</li>
+            <li><strong>%</strong> Modulus (remainder)</li>
+        </ul>
+
+        <p>Example: </p>
+        <pre><code>
+            #include &lt;stdio.h&gt;
+            int main() {
+                int a = 10;
+                int b = 3;
+
+                printf("Addition: %d\n", a + b);
+                printf("Subtraction: %d\n", a - b);
+                printf("Multiplication: %d\n", a * b);
+                printf("Division: %d\n", a / b);
+                printf("Remainder: %d\n", a % b);
+                return 0;
+            }
+        </code></pre>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>
+            Addion: 13
+            Subtraction: 7
+            Multiplication: 30
+            Division: 3
+            Remainder: 1
+        </code></pre>
+
+        <p>
+            <strong>Important: </strong>When both operands are integers.
+            integer division discards the fractional part.
+            For example, 10 / 3 gives 3.
+        </p>
+
+        <h2>2. Relational Operators</h2>
+        <p>
+            Relational operators compare two values.
+            The result is either true (1) or false (0) in C.
+        </p>
+
+        <ul>
+            <li><strong>==</strong>Equal to</li>
+            <li><strong>!=</strong>Not equal to</li>
+            <li><strong>&gt;</strong>Greater than</li>
+            <li><strong>&gt;=</strong>Greater than or equal to</li>
+            <li><strong>&lt;</strong>Less than</li>
+            <li><strong>&lt;=</strong>Less than or equal to</li>
+        </ul>
+        <p>Example: </p>
+        <pre><code>
+            #include &lt;stdio.h&gt;
+            int main() {
+                int a = 10;
+                int b = 5;
+                printf("%d\n", a > b);
+                printf("%d\n", a == b);
+                printf("%d\n", a != b);
+                return 0;
+            }
+        </code></pre>
+
+        <p><strong>Output: </strong></p>
+        <pre><code>
+            1
+            0
+            1
+        </code></pre>
+
+        <h2>3. Logical Operators</h2>
+        <p>
+            Logical operators are used to combine or reverse conditions.
+        </p>
+
+        <ul>
+            <li><strong>&amp;&amp;</strong> Logical AND</li>
+            <li><strong>||</strong> Logical OR</li>
+            <li><strong>!</strong> Logical NOT</li>
+        </ul>
+        <p>Example: </p>
+        <pre><code>
+            #include &lt;stdio.h&gt;
+            int main() {
+                int age = 20;
+
+                printf("%d\n", age >= 18 &amp;&amp; age <= 60);
+                printf("%d\n", age >= 18 || age <= 60);
+                printf("%d\n", !(age >= 18));
+                return 0;
+            }
+        </code></pre>
+
+        <p><strong>Output: </strong></p>
+        <pre><code>
+            1
+            0
+            0
+        </code></pre>
+        
+        <h2>4. Assignment Operators</h2>
+        <p>
+            Assignment operators are used to assign values to variables or update their values.
+        </p>
+
+        <ul>
+            <li><strong>=</strong> Assign</li>
+            <li><strong>+=</strong> Add and assign</li>
+            <li><strong>-=</strong> Subtract and assign</li>
+            <li><strong>*=</strong> Multiply and assign</li>
+            <li><strong>/=</strong> Divide and assign</li>
+            <li><strong>%=</strong> Modulus and assign</li>
+        </ul>
+
+        <p>Example: </p>
+        <pre><code>
+            #include &lt;stdio.h&gt;
+            int main() {
+                int number = 10;
+                number += 5;
+                printf("Result: %d", number);
+                return 0;
+            }
+        </code></pre>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>Result: 15</code></pre>
+        <p>
+            Here, number += 5 is equivalent to number = number + 5.
+        </p>
+
+        <h2>5. Increament and Decrement Operators</h2>
+        <p>
+            These operators increase or decrease a variable's value by one.
+        </p>
+
+        <ul>
+            <li><strong>++</strong> Increment</li>
+            <li><strong>--</strong> Decrement</li>
+        </ul>
+
+        <p>Example: </p>
+        <pre><code>
+            #include &lt;stdio.h&gt;
+            int main() {
+                int number = 5;
+                number++;
+                printf("After increment: %d\n", number);
+                number--
+                printf("After decrement: %d", number);
+                return 0;
+            }
+        </code></pre>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>
+            After increment: 6
+            After decrement: 5
+        </code></pre>
+
+        <h2>6. Operator Precedence</h2>
+        <p>
+            Operator precedence determines which operation is performed first in an expression.
+        </p>
+
+        <p>Example: </p>
+        <pre><code>int result = 10 + 5 * 2</code></pre>
+
+        <p>
+            Multiplication is performed before addition.
+        </p>
+
+        <p><strong>Result:</strong></p>
+        <pre><code>20</code></pre><br>
+        <p>
+            Parentheses can be used to control the order of operations.
+        </p>
+        <pre><code>int result = (10 + 5) * 2;</code></pre>
+        <p><strong>Result:</strong></p>
+        <pre><code>30</code></pre>
+
+        <h2>7. Try It Yourself</h2>
+        <p>
+            Write a C program that performs the following operations:
+        </p>
+
+        <ul>
+            <li>Declare two integer variables.</li>
+            <li>Display their sum.</li>
+            <li>Display their difference.</li>
+            <li>Display their product.</li>
+            <li>Check whether the first number is greater than second.</li>
+        </ul>
+
+        <h2>8. Quick Knowledge Check</h2>
+        <p><strong>Question 1:</strong> Which operator is used to find the remainder?</p>
+        <p><strong>Question 2:</strong> What is difference between = and == ?</p>
+        <p><strong>Question 3:</strong> What does the && operator do?</p>
+        <p><strong>Question 4:</strong> What is the result of 10 / 3 when both values are integers?</p>
+        <p><strong>Question 5:</strong> What is the purpose of the ++ operator?</p>
+
+        <div class="lesson-navigation">
+            <a href="c-variables.html" class="start-btn">Previous Lesson</a>
+
+            <a href="c-input-output.html" class="start-btn">Next Lesson</a>
+        </div>
+
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input and Output in C | CodePath</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Code<span>Path</span></div>
+        <a href="../c-beginner.html" class="nav-link">Back to Lessons</a>
+    </nav>
+
+    <section class="lesson-content">
+        <span class="lesson-number">Lesson 7</span>
+        <h1>Input and Output in C</h1>
+        <p>
+            Input and output operations allow users to interact with a program.
+            In this lesson, you will learn how at accept information and display results in C.
+        </p>
+
+        <h2>1. What is Input and Output?</h2>
+        <p>
+            <strong>Input:</strong> Information provided to a program by user.
+        </p>
+
+        <p>
+            <strong>Output:</strong> Information displayed by a program after processing.
+        </p>
+
+        <p>
+            C provides functions such as printf() and scanf() for basic input and output operations.
+        </p>
+
+        <h2>2. The printf() Function</h2>
+        <p>
+            The printf() function is used to display text, numbers and other information on the screen.
+        </p>
+
+        <p>Example: </p>
+        <pre><code>
+            #include &lt;stdio.h&gt;
+            int main() {
+                printf("Welcome to CodePath!");
+                return 0;
+            }
+        </code></pre>
+        <p><strong>Output:</strong></p>
+        <pre><code>Welcome to CodePath!</code></pre>
+
+        <h2>3. The scanf() Function</h2>
+        <p>
+            The scanf() function is used to accept input from the user.
+        </p>
+        <p>Example:</p>
+        <pre><code>
+            #include &lt;stdio.h&gt;
+            int main() {
+                int age;
+                printf("Enter your age: ");
+                scanf("&d", &amp;age);
+
+                printf("Your age is %d", age);
+                return 0;
+            }
+        </code></pre>
+
+        <p><strong>Example Output:</strong></p>
+        <pre><code>Enter your age: 20
+Your age is 20</code></pre>
+
+        <p>Here, %d specifies an integer and &amp;age provides the address of the age variable to scanf().</p>
+
+        <h2>4. Taking Multiple Inputs</h2>
+        <p>
+            We can accept multiple values using a single scanf() statement.
+        </p>
+
+        <p>Example: </p>
+        <pre><code>
+            #include &lt;stdio.h&gt;
+            int main() {
+                int a, b;
+                printf("Enter two numbers: ");
+                scanf("%d %d", &amp;a, &amp;b);
+
+                printf("First number: %d\n", a);
+                printf("Second number: %d", b);
+                return 0;
+            }
+        </code></pre>
+
+        <p><strong>Example output:</strong></p>
+        <pre><code>Enter two numbers: 10 20
+First number: 10
+Second number: 20</code></pre>
+        
+        <h2>5. Format Specifiers</h2>
+        <p>
+            Format specifiers tell printf() and scanf()
+            what type of data is being handled.
+        </p>
+
+        <ul>
+            <li><strong>%d</strong> - Integer (int)</li>
+            <li><strong>%c</strong> - Character (char)</li>
+            <li><strong>%f</strong> - Floating-point value (float)</li>
+            <li><strong>%lf</strong> - Double when using scanf()</li>
+            <li><strong>%s</strong> - String (character array)</li>
+            <li><strong>%u</strong> - Unsigned integer</li>
+        </ul>
+
+        <p>
+            Note: In printf(), %f is used to display both float and double values.
+        </p>
+
+        <p>Example: </p>
+        <pre><code>
+            #include &lt;stdio.h&gt;
+            int main() {
+                int age;
+                float marks = 85.5f;
+                char grade = 'A';
+
+                printf("Age: %d\n", age);
+                printf("Marks: %f\n", marks);
+                printf("Grade: %c", grade);
+                return 0;
+            }
+        </code></pre>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>Age: 20
+Marks: 85.50000
+Grade: A</code></pre>
+        
+        <h2>6. Escape Sequences</h2>
+
+        <p>
+            Escape sequences are special character combinations
+            used inside strings to control formatting.
+        </p>
+
+        <ul>
+            <li><strong>\n</strong> - Moves the cursor to a new line.</li>
+            <li><strong>\t</strong> - Inserts a horizontal tab.</li>
+            <li><strong>\\</strong> - Displays a backslash.</li>
+            <li><strong>\"</strong> - Displays a double quotation mark.</li>
+        </ul>
+
+        <p>Example:</p>
+
+        <pre><code>
+            #include &lt;stdio.h&gt;
+            int main() {
+                printf("Hello\nWorld!");
+                printf("\nName:\tStudent");
+                return 0;
+            }
+        </code></pre>
+
+        <p><strong>Output:</strong></p>
+
+        <pre><code>Hello
+World!
+Name:   Student</code></pre>
+
+
+        <h2>7. Taking Character Input</h2>
+
+        <p>
+            We can use scanf() with %c to accept a single
+            character from the user.
+        </p>
+
+        <p>Example:</p>
+
+        <pre><code>
+            #include &lt;stdio.h&gt;
+            int main() {
+                char grade;
+                printf("Enter your grade: ");
+                scanf("%c", &amp;grade);
+
+                printf("Your grade is %c", grade);
+                return 0;
+            }
+        </code></pre>
+
+        <p>
+            The space before %c tells scanf() to skip
+            whitespace characters such as spaces and newlines.
+        </p>
+
+        <h2>8. Try It Yourself</h2>
+        <p>
+            Write a C program that accepts two numbers from
+            the user and displays:
+        </p>
+
+        <ul>
+            <li>The first number.</li>
+            <li>The second number.</li>
+            <li>Their sum.</li>
+            <li>Their product.</li>
+        </ul>
+
+        <p>
+            Use scanf() to accept input and printf()
+            to display the results.
+        </p>
+
+        <h2>9. Quick Knowledge Check</h2>
+        <p><strong>Question 1:</strong> Which function is used to display output in C?</p>
+        <p><strong>Question 2:</strong> Which function is used to accept input?</p>
+        <p><strong>Question 3:</strong> What is the purpose of &amp; in scanf()?</p>
+        <p><strong>Question 4:</strong> Which format specifier is used for a character?</p>
+        <p><strong>Question 5:</strong> What is the purpose of the \n escape sequence?</p>
+
+        <div class="lesson-navigation">
+            <a href="c-operators.html" class="start-btn">Previous Lesson</a>
+            
+            <a href="c-if-else.html" class="start-btn">Next Lesson</a>
+        </div>
+    </section>
+</body>
+</html>
