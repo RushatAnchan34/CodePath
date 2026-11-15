@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables and Data Types | CodePath</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Code<span>Path</span></div>
+        <a href="../c-beginner.html" class="nav-link">Back to Lessons</a>
+    </nav>
+
+    <section class="lesson-content">
+        <span class="lesson-number">Lesson 5</span>
+        <h1>Variables and Data Types</h1>
+        <p>
+            In this lesson, you will learn how to store information
+            in a C program using variables and data types.
+        </p>
+
+        <h2>1. What is a Variable?</h2>
+        <p>
+            A variable is a named storage location in memory
+            that holds a value which a program can use.
+        </p>
+
+        <p>Example: </p>
+        <pre><code>int age = 20;</code></pre>
+        <p>Here:</p>
+        <ul>
+            <li><strong>int</strong> specifies the data type.</li>
+            <li><strong>age</strong> is the variable name.</li>
+            <li><strong>20</strong> is the value stored in the variable.</li>
+        </ul>
+
+        <h2>2. Rules for Naming Variables</h2>
+        <p>Follow these rules when naming variables in C:</p>
+        <ul>
+            <li>A variable name can contain letters, digits and underscores.</li>
+            <li>It cannot begin with a digit.</li>
+            <li>Spaces are not allowed.</li>
+            <li>C keywords cannot be used as variable names.</li>
+            <li>Variable names are case-sensitive.</li>
+        </ul>
+
+        <p><strong>Valid examples: </strong></p>
+        <pre><code>
+            int age;
+            int student_marks;
+            int number1;
+        </code></pre>
+
+        <p><strong>Invalid examples: </strong></p>
+        <pre><code>
+            int 1number;
+            int student marks;
+            int float;
+        </code></pre>
+
+        <h2>3. What are Data Types?</h2>
+        <p>
+            A data type specifies what kind of value a variable can store.
+        </p>
+
+        <h3>Common Data Types in C</h3>
+        <ul>
+            <li><strong>int:</strong> Stores whole numbers.</li>
+            <li><strong>char:</strong> Stores a single character.</li>
+            <li><strong>float:</strong> Stores decimal numbers</li>
+            <li><strong>double:</strong> Stores decimal numbers with greater precision than float.</li>
+        </ul>
+
+        <p>Examples:</p>
+        <pre><code>
+            int age = 20;
+            char grade = 'A';
+            float price = 99.50f;
+            double salary = 25000.75;
+        </code></pre>
+
+        <h2>4. Displaying Variable Values</h2>
+        <p>
+            We use the printf() function to display variable values.
+            Different data types use different format specifiers.
+        </p>
+
+        <ul>
+            <li><strong>%d</strong> - int</li>
+            <li><strong>%c</strong> - char</li>
+            <li><strong>%f</strong> - float</li>
+            <li><strong>%f</strong> - double in printf()</li>
+        </ul>
+
+        <p>Example: </p>
+        <pre><code>
+            #include &lt;stdio.h&gt;
+            int main() {
+                int age = 20;
+                char grade = 'A';
+                float marks = 85.5f;
+
+                printf("Age: %d\n", age);
+                printf("Grade: %c\n", grade);
+                printf("Marks: %f\n", marks);
+
+                return 0;
+            }
+        </code></pre>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>
+            Age: 20
+            Grade: A
+            Marks: 85.50000
+        </code></pre>
+
+        <h2>5. Taking Input from the User</h2>
+        <p>
+            We can use scanf() to accept input from the user.
+            The address operator (&amp;) is used to provide
+            the variable's address.
+        </p>
+
+        <p>Example: </p>
+        <pre><code>
+            #include &lt;stdio.h&gt;
+            int main() {
+                int age;
+                printf("Enter your age: ");
+                scanf("%d", &amp;age);
+
+                printf("Your age is %d", age);
+                return 0;
+            }
+        </code></pre>
+
+        <p><strong>Example output: </strong></p>
+        <pre><code>
+            Enter your age: 20
+            Your age is 20
+        </code></pre>
+
+        <h2>6. What are Constants?</h2>
+        <p>
+            A constant is a value that should not be changed during normal program execution.
+        </p>
+        <p>We can use he const keyowrd to declare a constant.</p>
+        <pre><code>
+            #include &it;stdio.h&gt;
+            int main() {
+                const float PI = 3.14f;
+                printf("Value of PI: %f", PI);
+                return 0;
+            }
+        </code></pre>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>Value of PI: 3.140000</code></pre>
+        <h2>7. Try It Yourself</h2>
+        <p>
+            Write a C program that stores the following information using appropriate data types:
+        </p>
+
+        <ul>
+            <li>Your age</li>
+            <li>Your grade</li>
+            <li>Your percentage</li>
+        </ul>
+
+        <p>Display all three values using printf().</p>
+        <h2>8. Quick Knowledge Check</h2>
+        <p><strong>Question 1:</strong> What is a variable in C?</p>
+        <p><strong>Question 2:</strong> Which data type is used to store a single character?</p>
+        <p><strong>Question 3:</strong> What is the different between float and int?</p>
+        <p><strong>Question 4:</strong> Which function is used to accept input from the user?</p>
+        <p><strong>Question 5:</strong> What is the purpose of the const keyword?</p>
+
+        <div class="lesson-navigation">
+            <a href="c-first-program.html" class="start-btn">Precious Lesson</a>
+
+            <a href="c-operations.html" class="start-btn">Next Lesson</a>
+        </div>
+    </section>
+</body>
+</html>

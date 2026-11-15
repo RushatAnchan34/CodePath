@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your First C Program | CodePath</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Code<span>Path</span></div>
+        <a href="../c-beginner.html" class="nav-link">Back to Lessons</a>
+    </nav>
+
+    <section class="lesson-content">
+        <span class="lesson-number">Lesson 4</span>
+        <h1>Your First C Program</h1>
+        <p>
+            Welcome to your first practical C programming lesson!
+            In this lesson, you will write and understand your first C program.
+        </p>
+
+        <h2>1. Writing Your First Program</h2>
+        <p>
+            Let's start with a simple program that displays
+            Hello, World! on the screen.
+        </p>
+        <pre><code>            #include &lt;stdio.h&gt;
+            int main() {
+                printf("Hello, World!");
+                return 0;
+            }</code></pre>
+
+        <h2>2. Understanding the program</h2>
+        <h3>#include &lt;stdio.h&gt;</h3>
+        <p>
+            This is a preprocessor directive.
+            It includes the Standard Input Output header file.
+            which provides functions such as printf() and scanf().
+        </p>
+
+        <h3>int main()</h3>
+        <p>
+            The main() function is the entry point of a C program.
+            Program execution begins from this function.
+        </p>
+
+        <h3>printf()</h3>
+        <p>
+            The printf() function displays output on the screen.
+        </p>
+
+        <h3>return 0</h3>
+        <p>
+            This indicates that the main() function has finished successfully.
+        </p>
+
+        <h2>3. Program Output</h2>
+        <p>When you exxecute the program, you get:</p>
+        <pre>Hello, World!</pre>
+
+        <h2>4. Important Rules in C</h2>
+        <ul>
+            <li>C is case-sensitive.</li>
+            <li>Most statements end with a semicolon (;).</li>
+            <li>Curly braces {} define a block of code.</li>
+            <li>Every executable C program needs a main() function.</li>
+        </ul>
+
+        <h2>5. Try It Yourself</h2>
+        <p>
+            Modify the previous program to display your favourite programming language.
+        </p>
+        <p><strong>Expected output example:</strong></p>
+        <pre>I love programming!</pre>
+        <p>Try changing the text inside printf() and run the program.</p>
+
+        <h2>6. Quick knowledge Check</h2>
+        <p><strong>Question 1:</strong> Which function displays output in C?</p>
+        <p><strong>Question 2:</strong> What is the purpose of stdio.h?</p>
+        <p><strong>Question 3:</strong> Why do we return 0?</p>
+
+        <div class="lesson-navigation">
+            <a href="c-installation.html" class="start-btn">Previous Lesson</a>
+
+            <a href="c-variables.html" class="start-btn">Next Lesson</a>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installing a Compiler | CodePath</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Code<span>Path</span></div>
+        <a href="../c-beginner.html" class="nav-link">Back to Lessons</a>
+    </nav>
+
+    <section class="lesson-content">
+        <span class="lesson-number">Lesson 3</span>
+        <h1>Installing a C Compiler</h1>
+        <h2>1. What is a Compiler?</h2>
+        <p>
+            A Compiler is a software tool that translates source code
+            written in a programming language into a form that the computer can execute.
+        </p>
+
+        <p>
+            In C programming, GCC is a popular compiler used to compile C programs.
+        </p>
+
+        <h2>2. What is GCC?</h2>
+        <p>
+            GCC stands for GNU Compiler Colloection. It supports programming languages such as C and C++.
+        </p>
+
+        <h2>3. What Do We Need?</h2>
+        <ul>
+            <li>A computer/</li>
+            <li>A text editor such as Visual Studio Code, CodeBlocks and many more.</li>
+            <li>A C compiler such as GCC.</li>
+        </ul>
+
+        <h2>4. Installing GCC on Windows</h2>
+        <p>
+            One way to install GCC on Windows is through MSYS2.
+            MSYS2 provides a package manager that helps install development tools.
+        </p>
+
+        <h3>Step 1: Download MSYS2</h3>
+        <p>
+            Visit the official MSYS2 website and download its installer.
+        </p>
+
+        <p>
+            <a href="https://www.msys2.org/" target="_blank" rel="noopener noreferrer">Visit MSYS2 Official Website</a>
+        </p>
+
+        <h3>Step 2: Install MSYS2</h3>
+        <p>
+            Run the installwe and follow the installation instructions.
+            The default installation location is recommended.
+        </p>
+
+        <h3>Step 3: Open UCRT64 Terminal</h3>
+        <p>
+            After installation, open the MSYS2 UCRT64 terminal from the Windows Start menu.
+        </p>
+
+        <h3>Step 4: Install GCC</h3>
+        <p>
+            Enter the following command in the UCRT64 terminal:
+        </p>
+
+        <pre><code>pacman -S mingw-w64-ucrt-x86_64-gcc</code></pre>
+
+        <h3>Step 5: Verify Installation</h3>
+        <p>
+            Enter this command to check whether GCC is installed:
+        </p>
+        <pre><code>gcc --version</code></pre>
+
+        <p>
+            If the compiler version appears, GCC is installed.
+        </p>
+
+        <h2>5. Important Terms</h2>
+        <ul>
+            <li><strong>Compiler:</strong> Translates source code.</li>
+            <li><strong>GCC: </strong> GNU Compiler Colloection.</li>
+            <li><strong>IDE: </strong> An enviroment for writing and developing programs.</li>
+            <li><strong>Source Code: </strong> instructions written by a programmer.</li>
+        </ul>
+
+        <div class="lesson-navigation">
+            <a href="c-history.html" class="start-btn">Previous Lesson</a>
+
+            <a href="c-first-program.html" class="start-btn">Next Lesson</a>
+        </div>
+    </section>
+</body>
+</html>
