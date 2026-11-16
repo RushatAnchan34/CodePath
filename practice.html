@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Practice | CodePath</title>
+    <link rel="stylesheet" href="css/practice.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="practice-navbar">
+        <a href="index.html" class="practice-logo">Code<span>Path</span></a>
+        <a href="c-beginner.html" class="back-link">Back to Lessons</a>
+    </nav>
+
+    <!-- Main Practice Area -->
+    <main class="practice-container">
+
+        <!-- Question Section -->
+        <section class="question-panel">
+            <div class="question-header">
+                <span class="question-label">C Programming</span>
+                <span class="difficulty easy">Easy</span>
+            </div>
+
+            <h1>01. Add Two Numbers</h1>
+            <p>
+                Write a C program to accept two integers from the user
+                and display their sum.
+            </p>
+
+            <h2>Example</h2>
+            <div class="example-box">
+                <h3>Input</h3>
+                <pre>10
+20</pre>
+                <h3>Output</h3>
+                <pre>Sum = 30</pre>
+            </div>
+
+            <h2>Explanation</h2>
+            <p>In this problem, you need to:</p>
+
+            <ol>
+                <li>Accept two integer values.</li>
+                <li>Add both numbers.</li>
+                <li>Display their sum.</li>
+            </ol>
+
+            <h2>Requirements</h2>
+            <ul>
+                <li>Use the <code>int</code> data type.</li>
+                <li>Accept input using <code>scanf()</code>.</li>
+                <li>Display the result using <code>printf()</code>.</li>
+            </ul>
+        </section>
+
+        <!-- Editor Section -->
+        <section class="editor-panel">
+            <div class="editor-header">
+                <div class="editor-title">
+                    <span class="status-dot"></span>
+                    <span>main.c</span>
+                </div>
+                <span class="language-name">C</span>
+            </div>
+
+            <!-- Temporary Code Editor -->
+            <div class="editor-wrapper">
+
+                <textarea
+                    id="code-editor"
+                    spellcheck="false"
+                    autocomplete="off"
+                    autocapitalize="off"
+                >#include <stdio.h>
+int main() {
+    int a, b, sum;
+    // Write your code here
+    
+    return 0;
+}</textarea>
+
+            </div>
+
+            <!-- Editor Actions -->
+            <div class="editor-actions">
+                <button id="reset-btn" class="reset-btn">Reset Code</button>
+                <button class="run-btn" disabled>▶️ Run Code</button>
+            </div>
+
+            <!-- Output Section -->
+            <div class="output-panel">
+                <div class="output-header">
+                    <h3>Output</h3>
+                    <span class="output-status">Not running</span>
+                </div>
+
+                <div id="output-content">
+                    <p>Your program output will appear here.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/practice.js"></script>
+</body>
+</html>

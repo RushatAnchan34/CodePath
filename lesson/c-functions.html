@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Functions in C | CodePath</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Code<span>Path</span>
+        </div>
+
+        <a href="../c-beginner.html" class="nav-link">
+            ← Back to Lessons
+        </a>
+
+    </nav>
+
+
+    <!-- Lesson Content -->
+    <section class="lesson-content">
+
+        <span class="lesson-number">Lesson 10</span>
+
+        <h1>Functions in C</h1>
+
+        <p>
+            Learn how to create and use functions to organize,
+            reuse, and simplify your C programs.
+        </p>
+
+
+        <!-- Section 1 -->
+        <h2>1. What is a Function?</h2>
+
+        <p>
+            A function is a block of code that performs a specific task.
+            Instead of writing the same code repeatedly, we can create
+            a function and call it whenever needed.
+        </p>
+
+        <p>
+            For example, we can create a function to add two numbers.
+            Whenever we need to perform addition, we can call that function.
+        </p>
+
+        <h3>Example:</h3>
+
+        <pre><code>#include &lt;stdio.h&gt;
+
+void greet() {
+    printf("Welcome to CodePath!");
+}
+
+int main() {
+    greet();
+    return 0;
+}</code></pre>
+
+        <h3>Output:</h3>
+
+        <pre><code>Welcome to CodePath!</code></pre>
+
+        <p>
+            Here, <code>greet()</code> is a function.
+            We call it inside the <code>main()</code> function.
+        </p>
+
+
+        <!-- Section 2 -->
+        <h2>2. Why Do We Use Functions?</h2>
+
+        <p>Functions provide several advantages:</p>
+
+        <ul>
+            <li><strong>Code Reusability:</strong> We can use the same function multiple times.</li>
+
+            <li><strong>Easy Maintenance:</strong> We can modify a function without changing the entire program.</li>
+
+            <li><strong>Code Organization:</strong> Large programs can be divided into smaller parts.</li>
+
+            <li><strong>Readability:</strong> Functions make programs easier to understand.</li>
+        </ul>
+
+
+        <!-- Section 3 -->
+        <h2>3. Three Important Parts of a Function</h2>
+
+        <p>
+            In C, working with a function generally involves three important parts.
+        </p>
+
+        <h3>A. Function Declaration</h3>
+
+        <p>
+            A function declaration tells the compiler about the function's
+            name, return type, and parameters.
+        </p>
+
+        <pre><code>int add(int a, int b);</code></pre>
+
+
+        <h3>B. Function Definition</h3>
+
+        <p>
+            A function definition contains the actual instructions
+            that the function performs.
+        </p>
+
+        <pre><code>int add(int a, int b) {
+    return a + b;
+}</code></pre>
+
+
+        <h3>C. Function Call</h3>
+
+        <p>
+            A function call executes the function.
+        </p>
+
+        <pre><code>int result = add(10, 20);</code></pre>
+
+
+        <!-- Section 4 -->
+        <h2>4. Complete Function Example</h2>
+
+        <pre><code>#include &lt;stdio.h&gt;
+
+int add(int a, int b);
+
+int main() {
+    int result = add(10, 20);
+    printf("Sum = %d", result);
+    return 0;
+}
+
+int add(int a, int b) {
+    return a + b;
+}</code></pre>
+
+        <h3>Output:</h3>
+
+        <pre><code>Sum = 30</code></pre>
+
+        <p>Let's understand the important parts:</p>
+
+        <ul>
+            <li><code>int add(int a, int b);</code> declares the function.</li>
+
+            <li><code>add(10, 20)</code> calls the function.</li>
+
+            <li><code>a</code> and <code>b</code> are parameters.</li>
+
+            <li><code>10</code> and <code>20</code> are arguments.</li>
+
+            <li><code>return a + b;</code> sends the result back.</li>
+        </ul>
+
+
+        <!-- Section 5 -->
+        <h2>5. Parameters and Arguments</h2>
+
+        <p>
+            Parameters and arguments are related, but they are not exactly the same.
+        </p>
+
+        <ul>
+            <li><strong>Parameters:</strong> Variables mentioned in the function definition.</li>
+
+            <li><strong>Arguments:</strong> Actual values passed when calling the function.</li>
+        </ul>
+
+        <pre><code>#include &lt;stdio.h&gt;
+
+void display(int number) {
+    printf("Number = %d", number);
+}
+
+int main() {
+    display(50);
+    return 0;
+}</code></pre>
+
+        <h3>Output:</h3>
+
+        <pre><code>Number = 50</code></pre>
+
+        <p>
+            Here, <code>number</code> is the parameter and
+            <code>50</code> is the argument.
+        </p>
+
+
+        <!-- Section 6 -->
+        <h2>6. Return Values</h2>
+
+        <p>
+            A return value is the result sent back by a function
+            to the part of the program that called it.
+        </p>
+
+        <p>
+            The return type tells us what kind of value a function returns.
+        </p>
+
+        <pre><code>#include &lt;stdio.h&gt;
+
+float calculateArea(float radius) {
+    return 3.14 * radius * radius;
+}
+
+int main() {
+    float area = calculateArea(5);
+    printf("Area = %.2f", area);
+    return 0;
+}</code></pre>
+
+        <h3>Output:</h3>
+
+        <pre><code>Area = 78.50</code></pre>
+
+        <p>
+            The function returns a floating-point value, which is
+            stored in the <code>area</code> variable.
+        </p>
+
+
+        <!-- Section 7 -->
+        <h2>7. What is the void Keyword?</h2>
+
+        <p>
+            The <code>void</code> keyword indicates that a function
+            does not return a value.
+        </p>
+
+        <pre><code>#include &lt;stdio.h&gt;
+
+void welcome() {
+    printf("Welcome to C Programming!");
+}
+
+int main() {
+    welcome();
+    return 0;
+}</code></pre>
+
+        <h3>Output:</h3>
+
+        <pre><code>Welcome to C Programming!</code></pre>
+
+        <p>
+            Here, <code>welcome()</code> displays a message but does
+            not return any value.
+        </p>
+
+
+        <!-- Section 8 -->
+        <h2>8. Common Types of Functions</h2>
+
+        <p>
+            Functions are commonly classified into four categories
+            based on their arguments and return values.
+        </p>
+
+        <h3>1. No Arguments and No Return Value</h3>
+
+        <pre><code>void display() {
+    printf("Hello!");
+}</code></pre>
+
+        <h3>2. Arguments and No Return Value</h3>
+        <pre><code>void display(int number) {
+    printf("%d", number);
+}</code></pre>
+        <h3>3. No Arguments but Returns a Value</h3>
+        <pre><code>int getNumber() {
+    return 100;
+}</code></pre>
+
+        <h3>4. Arguments and Returns a Value</h3>
+
+        <pre><code>int add(int a, int b) {
+    return a + b;
+}</code></pre>
+
+
+        <!-- Section 9 -->
+        <h2>9. Local Variables in Functions</h2>
+
+        <p>
+            A local variable is a variable declared inside a function
+            or block. It can normally be accessed only within that
+            function or block.
+        </p>
+
+        <pre><code>#include &lt;stdio.h&gt;
+
+void display() {
+    int number = 100;
+    printf("Number = %d", number);
+}
+
+int main() {
+    display();
+    return 0;
+}</code></pre>
+
+        <h3>Output:</h3>
+
+        <pre><code>Number = 100</code></pre>
+
+        <p>
+            The variable <code>number</code> is local to
+            <code>display()</code>. We cannot directly access it
+            inside <code>main()</code>.
+        </p>
+
+
+        <!-- Section 10 -->
+        <h2>10. Introduction to Recursion</h2>
+
+        <p>
+            Recursion is a programming technique in which a function
+            calls itself.
+        </p>
+
+        <p>
+            Every recursive function needs a stopping condition,
+            called a base case. Without it, the function may keep
+            calling itself.
+        </p>
+
+        <pre><code>#include &lt;stdio.h&gt;
+
+void countDown(int number) {
+    if (number == 0) {
+        return;
+    }
+    printf("%d\n", number);
+    countDown(number - 1);
+}
+
+int main() {
+    countDown(5);
+    return 0;
+}</code></pre>
+
+        <h3>Output:</h3>
+
+        <pre><code>5
+4
+3
+2
+1</code></pre>
+
+        <p>
+            The function calls itself with a smaller number until
+            it reaches zero. At zero, the base case stops the recursion.
+        </p>
+
+
+        <!-- Section 11 -->
+        <h2>11. Practice Exercise</h2>
+
+        <p>Try solving these questions yourself:</p>
+
+        <ol>
+            <li>Write a function that displays your name.</li>
+
+            <li>Write a function that adds two numbers and returns the result.</li>
+
+            <li>Write a function that finds the square of a number.</li>
+
+            <li>Write a function that checks whether a number is even or odd.</li>
+        </ol>
+
+        <p>
+            Try writing the programs without looking at the examples.
+            This will help you understand how functions work.
+        </p>
+
+
+        <!-- Section 12 -->
+        <h2>12. Knowledge Check</h2>
+
+        <p>
+            <strong>1. Which keyword indicates that a function returns no value?</strong>
+        </p>
+
+        <ul>
+            <li>A. int</li>
+            <li>B. void</li>
+            <li>C. return</li>
+            <li>D. float</li>
+        </ul>
+
+        <p><strong>2. What is a function call?</strong></p>
+
+        <ul>
+            <li>A. Creating a variable</li>
+            <li>B. Executing a function</li>
+            <li>C. Declaring a header file</li>
+            <li>D. Ending a program</li>
+        </ul>
+
+        <p><strong>3. What is recursion?</strong></p>
+
+        <ul>
+            <li>A. A loop inside another loop</li>
+            <li>B. A function calling itself</li>
+            <li>C. Declaring a variable</li>
+            <li>D. Printing a value</li>
+        </ul>
+
+        <p><strong>4. What does a return statement do?</strong></p>
+
+        <ul>
+            <li>A. Repeats a function</li>
+            <li>B. Declares a variable</li>
+            <li>C. Sends a value back from a function</li>
+            <li>D. Includes a header file</li>
+        </ul>
+
+
+        <!-- Lesson Navigation -->
+        <div class="lesson-navigation">
+
+            <a href="c-loops.html" class="start-btn">
+                Previous Lesson
+            </a>
+
+            <a href="../c-beginner.html" class="start-btn">
+                Finish Beginner Lessons
+            </a>
+        </div>
+    </section>
+</body>
+</html>

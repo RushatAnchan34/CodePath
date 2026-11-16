@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in C | CodePath</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+
+        <div class="logo">Code<span>Path</span></div>
+
+        <a href="../c-beginner.html" class="nav-link">
+            ← Back to Lessons
+        </a>
+
+    </nav>
+
+
+    <section class="lesson-content">
+
+        <span class="lesson-number">LESSON 09</span>
+
+        <h1>Loops in C</h1>
+
+        <p>
+            Loops are used to execute a block of code repeatedly
+            while a particular condition is satisfied.
+            In this lesson, you will learn the different types
+            of loops available in C.
+        </p>
+
+
+        <h2>1. What are Loops?</h2>
+
+        <p>
+            A loop is a programming structure that repeats
+            a set of instructions until a specified condition
+            becomes false.
+        </p>
+
+        <p>
+            For example, if you want to print numbers from 1 to 5,
+            you can use a loop instead of writing five separate
+            printf() statements.
+        </p>
+
+
+        <h2>2. Types of Loops in C</h2>
+
+        <p>C provides three main types of loops:</p>
+
+        <ul>
+            <li>for loop</li>
+            <li>while loop</li>
+            <li>do-while loop</li>
+        </ul>
+
+
+        <h2>3. The for Loop</h2>
+
+        <p>
+            A for loop is commonly used when you know how many
+            times you want to repeat a block of code.
+        </p>
+
+        <p><strong>Syntax:</strong></p>
+
+        <pre><code>for (initialization; condition; update) {
+
+        // Code to execute
+
+    }</code></pre>
+
+        <p><strong>Example:</strong></p>
+
+        <pre><code>
+            #include &lt;stdio.h&gt;
+            int main() {
+                for (int i = 1; i <= 5; i++) {
+                    printf("%d\n", i);
+                }
+                return 0;
+            }
+        </code></pre>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>1
+2
+3
+4
+5</code></pre>
+        <p><strong>Understanding the for loop:</strong></p>
+        <ul>
+            <li><strong>int i = 1:</strong> Initializes the variable.</li>
+            <li><strong>i <= 5:</strong> Checks the condition.</li>
+            <li><strong>i++:</strong> Increases the variable by one.</li>
+        </ul>
+
+        <h2>4. The while Loop</h2>
+        <p>
+            A while loop executes a block of code as long as
+            its condition remains true.
+        </p>
+        <p><strong>Syntax:</strong></p>
+        <pre><code>
+            while (condition) {
+            // Code to execute
+            }
+        </code></pre>
+        <p><strong>Example:</strong></p>
+        <pre><code>
+            #include &lt;stdio.h&gt;
+            int main() {
+                int i = 1;
+                while (i <= 5) {
+                    printf("%d\n", i);
+                    i++;
+                }
+                return 0;
+            }
+        </code></pre>
+
+        <p><strong>Output:</strong></p>
+
+        <pre><code>1
+2
+3
+4
+5</code></pre>
+        <p>
+            Remember to update the loop variable.
+            Otherwise, the condition may remain true forever,
+            creating an infinite loop.
+        </p>
+
+        <h2>5. The do-while Loop</h2>
+        <p>
+            A do-while loop executes its code block at least once
+            before checking the condition.
+        </p>
+        <p><strong>Syntax:</strong></p>
+        <pre><code>
+            do {
+                // Code to execute
+            } while (condition);
+        </code></pre>
+        <p><strong>Example:</strong></p>
+        <pre><code>
+            #include &lt;stdio.h&gt;
+            int main() {
+                int i = 1;
+                do {
+                    printf("%d\n", i);
+                    i++;
+                } while (i <= 5);
+                return 0;
+            }
+        </code></pre>
+        <p><strong>Output:</strong></p>
+        <pre><code>1
+2
+3
+4
+5</code></pre>
+
+        <h2>6. Difference Between for, while and do-while</h2>
+        <ul>
+            <li>
+                <strong>for:</strong> Useful when the number
+                of repetitions is known.
+            </li>
+
+            <li>
+                <strong>while:</strong> Useful when repetition
+                depends on a condition.
+            </li>
+
+            <li>
+                <strong>do-while:</strong> Executes the code
+                at least once before checking the condition.
+            </li>
+        </ul>
+
+        <h2>7. Nested Loops</h2>
+        <p>
+            A nested loop means placing one loop inside another loop.
+            It is useful for working with patterns, tables and
+            multidimensional data.
+        </p>
+        <p><strong>Example:</strong></p>
+        <pre><code>
+            #include &lt;stdio.h&gt;
+
+            int main() {
+                for(int i = 1; i <= 3; i++){
+                    for(int j = 1; j <= 3; j++){
+                        printf("* ");
+                    }
+                    printf("\n");
+                }
+                return 0;
+            }
+        </code></pre>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>* * *
+* * *
+* * *</code></pre>
+
+        <h2>8. The break Statement</h2>
+        <p>The break statement is used to terminate a loopimmediately.</p>
+        <p><strong>Example:</strong></p>
+        <pre><code>
+            #include &lt;stdio.h&gt;
+            int main() {
+
+            for (int i = 1; i <= 5; i++) {
+                if (i == 3) {
+                        break;
+                    }
+                    printf("%d\n", i);
+                }
+                return 0;
+            }
+        </code></pre>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>1
+2</code></pre>
+
+        <h2>9. The continue Statement</h2>
+        <p>
+            The continue statement skips the remaining statements
+            in the current loop iteration and moves to the next
+            iteration.
+        </p>
+        <p><strong>Example:</strong></p>
+        <pre><code>
+            #include &lt;stdio.h&gt;
+            int main() {
+
+            for (int i = 1; i <= 5; i++) {
+                if (i == 3) {
+                    continue;
+                    }
+                    printf("%d\n", i);
+                }
+                return 0;
+            }
+        </code></pre>
+
+        <p><strong>Output:</strong></p>
+        <pre><code>1
+2
+4
+5</code></pre>
+
+        <h2>10. Try It Yourself</h2>
+        <p>Write a C program that prints all even numbers between 1 and 20 using a for loop.</p>
+
+        <p>Then try solving the same problem using a while loop.</p>
+
+        <h2>11. Quick Knowledge Check</h2>
+        <p>
+            <strong>Question 1:</strong>
+            What is a loop in C?
+        </p>
+
+        <p>
+            <strong>Question 2:</strong>
+            Name the three main types of loops in C.
+        </p>
+
+        <p>
+            <strong>Question 3:</strong>
+            Which loop executes at least once?
+        </p>
+
+        <p>
+            <strong>Question 4:</strong>
+            What happens when we use break inside a loop?
+        </p>
+
+        <p>
+            <strong>Question 5:</strong>
+            What is the difference between break and continue?
+        </p>
+
+        <div class="lesson-navigation">
+            <a href="c-if-else.html" class="start-btn">Previous Lesson</a>
+            <a href="c-functions.html" class="start-btn">Next Lesson</a>
+        </div>
+    </section>
+</body>
+</html>
