@@ -1,0 +1,29 @@
+{
+  "name": "codepath",
+  "version": "1.0.0",
+  "description": "This website project is about making coding easy to understand",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RushatAnchan34/CodePath.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RushatAnchan34/CodePath/issues"
+  },
+  "homepage": "https://github.com/RushatAnchan34/CodePath#readme",
+  "devDependencies": {
+    "vite": "^8.3.8"
+  },
+  "dependencies": {
+    "monaco-editor": "^0.57.0"
+  }
+}

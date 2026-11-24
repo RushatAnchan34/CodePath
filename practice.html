@@ -58,29 +58,29 @@
         <!-- Editor Section -->
         <section class="editor-panel">
             <div class="editor-header">
+
                 <div class="editor-title">
-                    <span class="status-dot"></span>
-                    <span>main.c</span>
+                    <span class="status-dot">
+                        <span>main.c</span>
+                    </span>
                 </div>
-                <span class="language-name">C</span>
+
+                <div class="editor-controls">
+                    <span class="lanuage-name">C</span>
+
+                    <select id="theme-select" class="theme-select">
+                        <option value="vs-dark">Dark</option>
+                        <option value="vs">Light</option>
+                        <option value="hc-blank">High Constract</option>
+                    </select>
+
+                    <button id="fullscreen-btn" class="fullscreen-btn">Fullscreen</button>
+                </div>
             </div>
 
             <!-- Temporary Code Editor -->
             <div class="editor-wrapper">
-
-                <textarea
-                    id="code-editor"
-                    spellcheck="false"
-                    autocomplete="off"
-                    autocapitalize="off"
-                >#include <stdio.h>
-int main() {
-    int a, b, sum;
-    // Write your code here
-    
-    return 0;
-}</textarea>
-
+                <div id="editor-container"></div>
             </div>
 
             <!-- Editor Actions -->
@@ -102,6 +102,6 @@ int main() {
             </div>
         </section>
     </main>
-    <script src="js/practice.js"></script>
+    <script type="module" src="js/practice.js"></script>
 </body>
 </html>
